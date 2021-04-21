@@ -9,6 +9,8 @@ class NotesController < ApplicationController
     json_response(note, :created)
   end
 
+  private
+  
   def note_params
     params.require(:note).permit(:text)
   end
